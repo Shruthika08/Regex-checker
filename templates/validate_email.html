@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <link rel="stylesheet" href="/static/validate_email.css">
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form action="/validate_email" method="POST" novalidate>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Check Email</button>
+    </form>
+    <br>
+    {% if is_valid is not none and request.method == 'POST' %}
+        {% if is_valid %}
+            <p>Valid Email</p>
+        {% else %}
+            <p>Invalid Email</p>
+        {% endif %}
+    {% endif %}
+    <br>
+    <a href="/">Back to Regex Matcher</a>
+</body>
+</html>

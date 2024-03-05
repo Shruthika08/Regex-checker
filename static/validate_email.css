@@ -1,0 +1,51 @@
+/* validate_email.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e4d1; 
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+label {
+    font-weight: bold;
+}
+
+input#email {
+    width: 100%;
+    max-width: 400px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #6b4e3d; 
+    border-radius: 5px;
+    background-color: #f1f4c8;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <h1>Regex Matcher</h1>
+    <form action="/" method="POST">
+        <label for="test_string">Test String:</label><br>
+        <textarea id="test_string" name="test_string" rows="6" cols="50">{{ test_string }}</textarea><br>
+        <label for="regex_pattern">Regex Pattern:</label><br>
+        <input type="text" id="regex_pattern" name="regex_pattern" value="{{ regex_pattern }}"><br><br>
+        <input type="submit">
+    </form>
+    <br>
+    {% if matches %}
+    <h2>Matches:</h2>
+    <ul>
+        {% for match in matches %}
+        <li>{{ match }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <br>
+    <a href="/validate_email">Validate Email</a>
+</body>
+</html>
